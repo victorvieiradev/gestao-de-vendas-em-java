@@ -3,7 +3,7 @@ public class Produto {
     private double preco;
 
 
-    public Produto(String nome, double preco, String data) {
+    public Produto(String nome, double preco) {
 
         this.setNome(nome);
         this.setPreco(preco);

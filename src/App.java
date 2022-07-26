@@ -42,11 +42,16 @@ public class App {
                 break;
 
                 case 5:
-                    //colocar novo produto
-
+                    System.out.println("Nome do produto ");
+                    String nomeProduto=input.next();
+                    System.out.println("preço do produto");
+                    double precoProduto= input.nextDouble();
+                    Produto produto= new Produto(nomeProduto, precoProduto);
+                    sistema.addProduto(produto);
                     break;
                 case 6:
-                    //Mostrar produtos
+                    System.out.println("Listando produtos cadastrados");
+                    sistema.exibirProduto();
                     break;
                 case 7:
                     //Fazer a venda
