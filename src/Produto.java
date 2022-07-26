@@ -1,13 +1,12 @@
 public class Produto {
     private String nome;
     private double preco;
-    private String data;
+
 
     public Produto(String nome, double preco, String data) {
 
         this.setNome(nome);
         this.setPreco(preco);
-        this.setData(data);
     }
 
     public String getNome() {
@@ -26,11 +25,4 @@ public class Produto {
         this.preco = preco;
     }
 
-    public String getData() {
-        return data;
-    }
-
-    public void setData(String data) {
-        this.data = data;
-    }
 }
