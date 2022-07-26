@@ -6,6 +6,8 @@ public class Sistema implements Gestao{
     Set<Cliente> clientesCadastrados = new HashSet<>();
     Set<Vendedor> vendedoresCadastrados = new HashSet<>();
 
+    Set<Venda> vendasRealizadas = new HashSet<>();
+
     @Override
     public void adicionarCliente(Cliente cliente) {
         this.clientesCadastrados.add(cliente);
@@ -26,5 +28,15 @@ public class Sistema implements Gestao{
     }
     void exibirVendedor(){
         vendedoresCadastrados.forEach(vendedor -> System.out.println("Nome: " + vendedor.getNome() + "\nCPF:" + vendedor.getCpf() + "\nEmail: " + vendedor.getEmail()));
+    }
+
+    public void adicionarVenda(Cliente cliente, Produto produto, Vendedor vendedor){
+
+    }
+
+    void exibirVenda(){
+        vendasRealizadas.forEach(venda -> System.out.println("Nome Cliente : " + venda.getCliente() + "\n Nome Vendedor:" + venda.getVendedor() + "\n Nome do Produto: " + venda.getProduto()+ "Data "+ venda.getData()));
+
+
     }
 }
