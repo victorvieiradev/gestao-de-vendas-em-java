@@ -30,8 +30,8 @@ public class Sistema implements Gestao{
         vendedoresCadastrados.forEach(vendedor -> System.out.println("Nome: " + vendedor.getNome() + "\nCPF:" + vendedor.getCpf() + "\nEmail: " + vendedor.getEmail()));
     }
 
-    public void adicionarVenda(Cliente cliente, Produto produto, Vendedor vendedor){
-
+    public void adicionarVenda(Cliente cliente, Produto produto, Vendedor vendedor, String data){
+        this.vendasRealizadas.add(new Venda(cliente.getNome(), vendedor.getNome(), produto.getNome(), data));
     }
 
     void exibirVenda(){
