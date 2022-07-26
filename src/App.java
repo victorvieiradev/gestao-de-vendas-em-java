@@ -7,7 +7,7 @@ public class App {
         System.out.println("Bem-vindo ao seu sistema de gestão de vendas");
         boolean inicio = true;
         while (inicio){
-            System.out.println("Qual é sua opção: \n1 - Cadastrar novo vendedor \n2 - Listar vendedores cadastrados \n3 - Cadastrar cliente \n 4 - Listar clientes cadastrados");
+            System.out.println("Qual é sua opção: \n1 - Cadastrar novo vendedor \n2 - Listar vendedores cadastrados \n3 - Cadastrar cliente \n 4 - Listar clientes cadastrados\n 5 - Adicionar Produto \n 6 - Mostrar Produtos \n 7 - Realizar venda  ");
             int resposta = input.nextInt();
             switch (resposta){
                 case 1:
@@ -40,10 +40,22 @@ public class App {
                     System.out.println("Exibindo clientes cadastrados no sistema.");
                     sistema.exibirClientes();
                 break;
+
                 case 5:
+                    //colocar novo produto
+
+                    break;
+                case 6:
+                    //Mostrar produtos
+                    break;
+                case 7:
+                    //Fazer a venda
+                    break;
+                case 0:
                     System.out.println("Fechando o sistema.");
                     inicio = false;
-                break;
+                    break;
+
                 default:
                     System.out.println("Valor inválido");
                 break;
