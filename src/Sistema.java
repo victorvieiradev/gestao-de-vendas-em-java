@@ -50,7 +50,7 @@ public class Sistema implements Gestao{
             }
         }
         if (autorisar == 3){
-            this.vendasRealizadas.add(new Venda(cliente, produto, vendedor, data));
+            this.vendasRealizadas.add(new Venda(cliente, vendedor, produto, data));
             System.out.println("Venda realizada com sucesso!");
         }else {
             System.out.println("Verifique as informações digitadas e tente novamente.");
@@ -60,8 +60,7 @@ public class Sistema implements Gestao{
     }
 
     void exibirVenda(){
-        vendasRealizadas.forEach(venda -> System.out.println("Nome Cliente : " + venda.getCliente() + "\n Nome Vendedor:" + venda.getVendedor() + "\n Nome do Produto: " + venda.getProduto()+ "Data "+ venda.getData()));
-
+        this.vendasRealizadas.forEach(venda -> System.out.println("Vendedor: " + venda.getVendedor() + "\nComprador: " + venda.getCliente() + "\nProduto comprado: " + venda.getProduto() + "\nData da venda: " + venda.getData()));
     }
     void exibirProduto(){
         listaDeProdutos.forEach(produto -> System.out.println("Produto: " +produto.getNome()+ " \nPreço: " + produto.getPreco() ));
