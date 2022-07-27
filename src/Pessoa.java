@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public abstract class Pessoa {
     private String nome;
     private String cpf;
@@ -7,6 +9,19 @@ public abstract class Pessoa {
         this.setNome(nome);
         this.setCpf(cpf);
         this.setEmail(email);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Pessoa pessoa = (Pessoa) o;
+        return nome.equals(pessoa.nome) && cpf.equals(pessoa.cpf) && email.equals(pessoa.email);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nome, cpf, email);
     }
 
     public String getNome() {

@@ -48,18 +48,29 @@ public class App {
                     double precoProduto= input.nextDouble();
                     Produto produto= new Produto(nomeProduto, precoProduto);
                     sistema.addProduto(produto);
-                    break;
+                break;
                 case 6:
                     System.out.println("Listando produtos cadastrados");
                     sistema.exibirProduto();
-                    break;
+                break;
                 case 7:
-                    //Fazer a venda
-                    break;
+                    System.out.println("Nova venda \nInforme o nome do vendedor");
+                    String nomeVendedor = input.next();
+                    System.out.println("Informe o nome do cliente: ");
+                    String nomeCliente = input.next();
+                    System.out.println("Nome do produto");
+                    nomeProduto = input.next();
+                    System.out.println("Data da venda");
+                    String data = input.next();
+                    sistema.adicionarVenda(nomeCliente, nomeProduto, nomeVendedor, data);
+                break;
+                case 8:
+                    sistema.exibirVenda();
+                break;
                 case 0:
                     System.out.println("Fechando o sistema.");
                     inicio = false;
-                    break;
+                break;
 
                 default:
                     System.out.println("Valor inválido");
