@@ -52,6 +52,16 @@ public class Sistema implements Gestao{
         if (autorizar == 3){
             this.vendasRealizadas.add(new Venda(cliente, vendedor, produto, data));
             System.out.println("Venda realizada com sucesso!");
+            for (Cliente cliente1 : clientesCadastrados){
+                if (cliente.equalsIgnoreCase(cliente1.getNome())){
+                    cliente1.carrinhoDeCompras.add(produto);
+                }
+            }
+            for (Vendedor vendedor1 : vendedoresCadastrados){
+        if (vendedor.equalsIgnoreCase(vendedor1.getNome())){
+            vendedor1.carrinhoDeVendas.add(produto);
+        }
+            }
         }else {
             System.out.println("Verifique as informações digitadas e tente novamente.");
         }
