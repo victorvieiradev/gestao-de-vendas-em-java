@@ -16,6 +16,12 @@ public class App {
                     String nome = input.next();
                     System.out.println("CPF: ");
                     String cpf = input.next();
+                    boolean isValido = Validar.validarCpfCliente(cpf);
+                    while (isValido){
+                        System.out.println("CPF inválido ou já existente em nosso cadastro, digite novamente seu CPF:");
+                        cpf = input.next();
+                        isValido = Validar.validarCpfCliente(cpf);
+                    }
                     System.out.println("Email: ");
                     String email = input.next();
                     Vendedor vendedor = new Vendedor(nome, cpf, email);
