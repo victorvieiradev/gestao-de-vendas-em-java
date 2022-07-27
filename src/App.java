@@ -7,7 +7,10 @@ public class App {
         System.out.println("Bem-vindo ao seu sistema de gestão de vendas");
         boolean inicio = true;
         while (inicio){
-            System.out.println("Qual é sua opção: \n1 - Cadastrar novo vendedor \n2 - Listar vendedores cadastrados \n3 - Cadastrar cliente \n 4 - Listar clientes cadastrados\n 5 - Adicionar Produto \n 6 - Mostrar Produtos \n 7 - Realizar venda \n8 - Listar vendas realizadas \n9 - Mostrar carrinho de compras do cliente");
+            System.out.println("Qual é sua opção: \n1 - Cadastrar novo vendedor \n2 - Listar vendedores cadastrados" +
+                    " \n3 - Cadastrar cliente \n4 - Listar clientes cadastrados\n5 - Adicionar Produto \n" +
+                    "6 - Mostrar Produtos \n7 - Realizar venda \n8 - Listar vendas realizadas \n" +
+                    "9 - Mostrar carrinho de compras do cliente \n10 - Exibir vendas do vendedor \n0 - Para sair");
             int resposta = input.nextInt();
             switch (resposta){
                 case 1:
@@ -92,6 +95,11 @@ public class App {
                     String cpfCliente = input.next();
                     sistema.buscarProdutosCliente(cpfCliente);
                 break;
+                case 10:
+                    System.out.println("Informe o email do vendedor: ");
+                    String emailVendedor = input.next();
+                    sistema.buscarVendasVendendor(emailVendedor);
+                    break;
                 case 0:
                     System.out.println("Fechando o sistema.");
                     inicio = false;

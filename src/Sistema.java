@@ -76,6 +76,14 @@ public class Sistema implements Gestao{
         }
     }
 
+    public void buscarVendasVendendor(String email){
+        for (Vendedor vendedor : vendedoresCadastrados){
+            if (email.equalsIgnoreCase(vendedor.getEmail())){
+                vendedor.carrinhoDeVendas.forEach(nome -> System.out.println("Produto: " + nome));
+            }
+        }
+    }
+
     void exibirVenda(){
         this.vendasRealizadas.forEach(venda -> System.out.println("Vendedor: " + venda.getVendedor() + "\nComprador: " + venda.getCliente() + "\nProduto comprado: " + venda.getProduto() + "\nData da venda: " + venda.getData()));
     }
