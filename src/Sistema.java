@@ -13,8 +13,6 @@ public class Sistema implements Gestao{
     @Override
     public void adicionarCliente(Cliente cliente) {
         this.clientesCadastrados.add(cliente);
-        Validar validar = new Validar();
-        validar.validarCpf(cliente.getCpf());
     }
 
     @Override
@@ -66,5 +64,17 @@ public class Sistema implements Gestao{
     }
     void exibirProduto(){
         listaDeProdutos.forEach(produto -> System.out.println("Produto: " +produto.getNome()+ " \nPreço: " + produto.getPreco() ));
+    }
+    int validarCpfCliente(String cpf){
+        int valor = 0;
+        for (Cliente cliente : clientesCadastrados){
+            if (cpf.equalsIgnoreCase(cliente.getCpf())){
+                valor = 1;
+            }
+        }
+        if (valor == 1){
+            return  1;
+        }
+        return  2;
     }
 }
