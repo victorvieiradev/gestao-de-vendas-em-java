@@ -7,7 +7,7 @@ public class App {
         System.out.println("Bem-vindo ao seu sistema de gestão de vendas");
         boolean inicio = true;
         while (inicio){
-            System.out.println("Qual é sua opção: \n1 - Cadastrar novo vendedor \n2 - Listar vendedores cadastrados \n3 - Cadastrar cliente \n 4 - Listar clientes cadastrados\n 5 - Adicionar Produto \n 6 - Mostrar Produtos \n 7 - Realizar venda  ");
+            System.out.println("Qual é sua opção: \n1 - Cadastrar novo vendedor \n2 - Listar vendedores cadastrados \n3 - Cadastrar cliente \n 4 - Listar clientes cadastrados\n 5 - Adicionar Produto \n 6 - Mostrar Produtos \n 7 - Realizar venda \n8 - Listar vendas realizadas");
             int resposta = input.nextInt();
             switch (resposta){
                 case 1:
