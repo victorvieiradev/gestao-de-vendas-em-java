@@ -1,14 +1,9 @@
-public class Validar extends Sistema {
+public class Validar {
 
-    boolean validarCpf(String cpf) {
-        for (Cliente cliente : clientesCadastrados) {
-            cpf = cliente.getCpf();
-            if (cpf.equalsIgnoreCase(cliente.getCpf())) {
-                return false;
-            } else {
-                return true;
-            }
-        }
-        return true;
+    void validarCpf(String cpf){
     }
-};
+
+    void validarEmail(String email){
+
+    }
+}
