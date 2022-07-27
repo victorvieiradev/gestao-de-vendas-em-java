@@ -24,6 +24,10 @@ public class App {
                     }
                     System.out.println("Email: ");
                     String email = input.next();
+                    while (!email.contains("@")){
+                        System.out.println("Email inválido, digite novamente");
+                        email= input.next();
+                    }
                     Vendedor vendedor = new Vendedor(nome, cpf, email);
                     sistema.adicionarVendedor(vendedor);
                 break;
@@ -45,6 +49,10 @@ public class App {
                     }
                     System.out.println("Email: ");
                     String email2 = input.next();
+                    while (!email2.contains("@")){
+                        System.out.println("Email inválido, digite novamente");
+                        email2= input.next();
+                    }
                     Cliente cliente = new Cliente(nome2, cpf2, email2);
                     sistema.adicionarCliente(cliente);
                 break;

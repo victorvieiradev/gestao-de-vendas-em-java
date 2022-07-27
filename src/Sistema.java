@@ -33,23 +33,23 @@ public class Sistema implements Gestao{
     }
 
     public void adicionarVenda(String cliente, String produto, String vendedor, String data){
-        int autorisar = 0;
+        int autorizar = 0;
         for (Cliente cliente1 : clientesCadastrados){
             if (cliente.equalsIgnoreCase(cliente1.getNome())){
-                autorisar += 1;
+                autorizar += 1;
             }
         }
         for (Vendedor vendedor1 : vendedoresCadastrados){
             if (vendedor.equalsIgnoreCase(vendedor1.getNome())){
-                autorisar += 1;
+                autorizar += 1;
             }
         }
         for (Produto produto1 : listaDeProdutos){
             if (produto.equalsIgnoreCase(produto1.getNome())){
-                autorisar += 1;
+                autorizar += 1;
             }
         }
-        if (autorisar == 3){
+        if (autorizar == 3){
             this.vendasRealizadas.add(new Venda(cliente, vendedor, produto, data));
             System.out.println("Venda realizada com sucesso!");
         }else {
