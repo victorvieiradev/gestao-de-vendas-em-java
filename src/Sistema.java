@@ -68,6 +68,13 @@ public class Sistema implements Gestao{
 
 
     }
+    public void buscarProdutosCliente(String cpf){
+        for (Cliente cliente : clientesCadastrados){
+            if (cpf.equalsIgnoreCase(cliente.getCpf())){
+                cliente.carrinhoDeCompras.forEach(nome -> System.out.println("Produto: " + nome));
+            }
+        }
+    }
 
     void exibirVenda(){
         this.vendasRealizadas.forEach(venda -> System.out.println("Vendedor: " + venda.getVendedor() + "\nComprador: " + venda.getCliente() + "\nProduto comprado: " + venda.getProduto() + "\nData da venda: " + venda.getData()));
