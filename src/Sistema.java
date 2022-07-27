@@ -77,4 +77,17 @@ public class Sistema implements Gestao{
         }
         return  2;
     }
+    int validarCpfVendedor(String cpf){
+        int valor = 0;
+        for (Vendedor vendedor : vendedoresCadastrados){
+            if (cpf.equalsIgnoreCase(vendedor.getCpf())){
+                valor = 1;
+            }
+        }
+        if (valor == 1){
+            return  1;
+        }
+        return  2;
+
+    }
 }
