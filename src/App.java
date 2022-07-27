@@ -31,6 +31,9 @@ public class App {
                     String nome2 = input.next();
                     System.out.println("CPF: ");
                     String cpf2 = input.next();
+                    Validar validar = new Validar();
+                    boolean validacao= validar.validarCpf(cpf2);
+                    System.out.println(validacao);
                     System.out.println("Email: ");
                     String email2 = input.next();
                     Cliente cliente = new Cliente(nome2, cpf2, email2);

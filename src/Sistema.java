@@ -13,6 +13,8 @@ public class Sistema implements Gestao{
     @Override
     public void adicionarCliente(Cliente cliente) {
         this.clientesCadastrados.add(cliente);
+        Validar validar = new Validar();
+        validar.validarCpf(cliente.getCpf());
     }
 
     @Override
